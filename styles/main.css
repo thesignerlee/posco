@@ -25,23 +25,38 @@ header nav .gnb {
 header nav .gnb > li {
   display: flex;
   position: relative;
+  /*                 .sub::after {
+                      content:''; display:block;
+                      width:1000%; position:absolute; z-index: -1; background: $color3; height:100%;
+                      top:0; left:-550%;
+                  } */
 }
 header nav .gnb > li > a {
   background: yellow;
   width: 200px;
   line-height: 100px;
   background: aqua;
+  font-size: 0.8rem;
 }
 header nav .gnb > li .sub {
   background: #0f6e38;
   position: absolute;
   top: 100px;
   width: 100%;
-  height: 290px;
+  height: 300px;
 }
 header nav .gnb > li .sub li a {
   display: block;
   padding: 10px;
+}
+header nav .bg {
+  background: pink;
+  height: 400px;
+  width: 1000%;
+  left: -50%;
+  position: absolute;
+  z-index: -1;
+  top: 100px;
 }
 
 header::after {
@@ -69,7 +84,7 @@ main h1 {
   color: #fff;
   padding-top: 450px;
   font-size: 3.5rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   font-weight: 800;
 }

@@ -20,15 +20,27 @@ header {@include layout; background: $color3;
                 position:relative;
                 >a {
                     background: yellow; width:200px; line-height: 100px; background: aqua;
+                    font-size: 0.8rem;
                 }
                 .sub {
-                    background: #0f6e38;position:absolute; top:100px; width:100%; height:290px;
+                    background: #0f6e38;position:absolute; top:100px; width:100%; height:300px;
                     li {
                         a {
                             display: block; padding:10px;}
                     }
                 }
+                //서브 배경 만드는 방법 1.
+                //js 설정 시 display 기능만 가능, height 애니메이션 X
+/*                 .sub::after {
+                    content:''; display:block;
+                    width:1000%; position:absolute; z-index: -1; background: $color3; height:100%;
+                    top:0; left:-550%;
+                } */
             }
+        }
+        .bg {
+            background: pink; height:400px; width:1000%; left:-50%;
+            position:absolute; z-index: -1; top:100px;
         }
     }
 }
@@ -42,7 +54,7 @@ main {background: url(../images/posco/s01_bg.jpg) no-repeat;
     position:relative;
     height:100vh; width:100%;
     h1 {text-align:center; color:$color3; padding-top: 450px;
-    font-size: 3.5rem; line-height: 1.2; letter-spacing: -0.02em;
+    font-size: 3.5rem; line-height: 1.5; letter-spacing: -0.02em;
     font-weight: 800;
     }
 }

@@ -1,0 +1,154 @@
+body {
+  height: 200vh;
+}
+
+#bg {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  left: 0%;
+  top: 0;
+  width: 100%;
+}
+#bg header {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+#bg header h1 a img {
+  width: 120%;
+}
+#bg header nav .gnb {
+  display: flex;
+}
+#bg header nav .gnb > li {
+  position: relative;
+  padding-right: 80px;
+}
+#bg header nav .gnb > li > a {
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: block;
+  line-height: 120px;
+}
+#bg header nav .gnb > li .sub {
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+}
+#bg header nav .gnb > li .sub > li > a {
+  padding-left: 7px;
+  display: block;
+  line-height: 3;
+  width: 120%;
+  font-weight: 800;
+}
+#bg header nav .gnb > li .sub > li .sub_sub li {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+}
+#bg header nav .gnb > li .sub > li .sub_sub li a {
+  display: block;
+  padding-left: 20px;
+  line-height: 2.5;
+  font-weight: 800;
+  color: #ccc;
+}
+#bg header nav .gnb > li .sub li:last-child {
+  padding-bottom: 0;
+}
+#bg header nav .gnb > li:last-child {
+  margin: 0;
+}
+#bg header nav .bg2 {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  background: #fff;
+  width: 1000%;
+  height: 800px;
+  z-index: -1;
+  border-top: 2px solid #ccc;
+}
+#bg header .all_nav {
+  width: 50px;
+}
+#bg header .all_nav span {
+  width: 50px;
+  height: 7px;
+  background: #003a14;
+  display: block;
+  transform: skewX(-40deg);
+}
+#bg header .all_nav span:nth-child(1) {
+  transform: skewX(-40deg) translateX(0);
+}
+#bg header .all_nav span:nth-child(2) {
+  transform: skewX(-40deg) translateX(-5px);
+  margin: 5px 0;
+}
+#bg header .all_nav span:nth-child(3) {
+  transform: skewX(-40deg) translateX(-10px);
+}
+
+main {
+  background: url(/images/unid/bg.jpg) center;
+}
+main .visual {
+  padding-top: 450px;
+  height: 100vh;
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main .visual .txt {
+  display: flex;
+  flex-flow: column wrap;
+}
+main .visual .txt span {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+main .visual .txt span:last-child {
+  margin-top: 20px;
+}
+main .visual .right_img {
+  position: relative;
+  width: 200px;
+}
+main .visual .right_img img:nth-child(1) {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .visual .right_img img:nth-child(2) {
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  width: 100%;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=unid.css.map */

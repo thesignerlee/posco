@@ -23,7 +23,6 @@ header nav .gnb {
   display: flex;
 }
 header nav .gnb > li {
-  display: flex;
   position: relative;
   /*                 .sub::after {
                       content:''; display:block;
@@ -44,6 +43,9 @@ header nav .gnb > li .sub {
   top: 100px;
   width: 100%;
   height: 300px;
+}
+header nav .gnb > li .sub li {
+  display: flex;
 }
 header nav .gnb > li .sub li a {
   display: block;

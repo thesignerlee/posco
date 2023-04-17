@@ -11,7 +11,6 @@ for(let i of sub){
     i.style.transition = 'all 1s'
 }
     bg.style.height = '0'
-    bg.style.overflow = 'hidden'
     bg.style.transition = 'all 1s'
 
 //2. gnb 자식 li에 마우스를 올리면 자식 sub 보이기(Node 관계처리)

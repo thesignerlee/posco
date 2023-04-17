@@ -16,7 +16,6 @@ header {@include layout; background: $color3;
         .gnb {
             display: flex;
             >li { 
-                display: flex;
                 position:relative;
                 >a {
                     background: yellow; width:200px; line-height: 100px; background: aqua;
@@ -24,7 +23,7 @@ header {@include layout; background: $color3;
                 }
                 .sub {
                     background: #0f6e38;position:absolute; top:100px; width:100%; height:300px;
-                    li {
+                    li {display: flex;
                         a {
                             display: block; padding:10px;}
                     }

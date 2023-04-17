@@ -1,0 +1,118 @@
+@mixin layout {width:1400px; margin:0 auto;}
+$color1:#222;
+$color2:#fff;
+$color3:#003a14;
+$color4:#f1f1f1;
+$color5:#888;
+$color5:#ccc;
+
+body{height: 200vh;}
+#bg {
+    background: rgba(255,255,255,0.6); position: fixed;
+    left:0%;
+    top:0;
+    width:100%;
+    header {@include layout;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        h1 {
+            a {img{width:120%;}}
+        }
+        nav {
+            .gnb {display: flex;
+                > li {
+                    position: relative;
+                    padding-right: 80px;
+                    >a {
+                        font-size: 1.2rem;
+                        font-weight:800;
+                        display:block;
+                        line-height: 120px; //li가 아니라 a에게 크기 줄 것. 자식이 커지면 부모도 커짐.
+                    }
+                    .sub {position: absolute; width:100%;
+                        height:70vh;
+                        > li {
+                            > a {
+                                padding-left: 7px;
+                            display:block;
+                            line-height: 3;
+                            width: 120%;
+                        font-weight: 800;}
+                            .sub_sub {
+                                li {
+                                    border-bottom: 1px dashed $color5;
+                                    padding-bottom: 10px;
+                                    
+                                    a {
+                                        display:block;
+                                        padding-left: 20px;
+                                        line-height: 2.5;
+                                        font-weight: 800;
+                                        color:$color5;
+                                    }
+                                }
+                            }
+                            .sub_sub:last-child {}
+                            .sub_sub:last-child {}
+                        }
+                        li:last-child {padding-bottom: 0;}
+                    }
+                    .sub1 {
+                        li {}
+                    }
+                }
+                > li:last-child {margin:0;}
+            }
+            .bg2 {
+                position: absolute;
+                top: 120px; left: 0;
+                background: $color2;
+                width:1000%;
+                height:800px;
+                z-index: -1;
+                border-top: 2px solid $color5;
+            }
+        }
+        .all_nav {width:50px;
+            span {width:50px; height: 7px; background: $color3; display: block; transform: skewX(-40deg);}
+            span:nth-child(1) {transform: skewX(-40deg) translateX(0);}
+            span:nth-child(2) {transform: skewX(-40deg) translateX(-5px); margin: 5px 0;}
+            span:nth-child(3) {transform: skewX(-40deg) translateX(-10px);}
+        }
+    }
+}
+main {background: url(/images/unid/bg.jpg) center;
+    .visual {
+        padding-top: 450px;
+        height: 100vh;
+        width:1400px;
+        margin: 0 auto;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        
+        .txt {
+            display:flex;
+            flex-flow: column wrap;
+            span {
+                color: $color2;
+                font-size: 4rem;
+                font-weight: 800;
+                line-height: 1.5;
+            }
+            span:last-child {margin-top:20px;}
+        }
+        .right_img {position: relative; width:200px;
+            img {}
+            img:nth-child(1) {position:absolute; top:20%; left:50%; transform: translate(-50%, -50%);}
+            img:nth-child(2) {animation: rotate 10s linear infinite; width:100%;}
+        }
+    }
+}
+@keyframes rotate {
+    0% {transform:rotate(0)}
+    100% {transform:rotate(360deg)}
+}
